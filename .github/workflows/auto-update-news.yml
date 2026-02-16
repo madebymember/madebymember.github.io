@@ -2,19 +2,26 @@ name: Auto-update news (Šalin rankas)
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # kas 6 val.
-  workflow_dispatch:
+    - cron: "0 */6 * * *"   # kas 6 val. (UTC)
+  workflow_dispatch:        # paleidimas rankiniu būdu per UI
 
 permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: auto-update-news
+  cancel-in-progress: false
+
 jobs:
   update-news:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -30,7 +37,7 @@ jobs:
         run: |
           python tools/update_news.py
 
-      - name: Detect changes
+      - name: Detect changes in index.html
         id: diff
         run: |
           if git diff --quiet --exit-code index.html; then
@@ -39,8 +46,10 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit & push changes
+      - name: Create branch, commit, push
         if: steps.diff.outputs.changed == 'true'
+        env:
+          TZ: Europe/Vilnius
         run: |
           BRANCH="auto/news-$(date +'%Y%m%d%H%M')"
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
@@ -57,36 +66,31 @@ jobs:
         with:
           script: |
             const branch = process.env.BRANCH;
-            const title  = "Auto: atnaujintos naujienos (Šalin rankas)";
+            const title  = "Auto: atnaujintos naujienų kortelės (Šalin rankas)";
             const body   = [
               "Šis PR automatiškai atnaujina naujienų korteles pagal stebimus šaltinius.",
               "",
-              "Stebimi šaltiniai:",
-              "- LRT, Delfi, Laikas.lt (LRT įstatymo pokyčiai / ministrės komentarai)",
-              "- TV3, KaunoDiena (akcijos finansavimas)",
-              "- e-Seimas / Infolex (pavasario sesijos darbotvarkė/kontekstas)",
-              "",
+              "Pastaba: jei reikia, redaguokite `tools/update_news.py` → SOURCES/KEYWORDS.",
               `Sugeneruota: ${new Date().toISOString()}`
             ].join("\n");
 
-            try {
-              // jei egzistuoja toks pat PR iš to paties branch – skip
-              const { data: openPRs } = await github.rest.pulls.list({
+            // jeigu egzistuoja PR iš to paties branch – nesikartoti
+            const openPRs = await github.paginate(github.rest.pulls.list, {
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              state: 'open',
+              head:  `${context.repo.owner}:${branch}`
+            });
+            if (openPRs.length === 0) {
+              const pr = await github.rest.pulls.create({
                 owner: context.repo.owner,
                 repo:  context.repo.repo,
-                state: 'open',
-                head:  `${context.repo.owner}:${branch}`
+                title,
+                head:  branch,
+                base:  'main',
+                body
               });
-              if (openPRs.length > 0) {
-                core.info(`PR jau atidarytas: #${openPRs[0].number}`);
-              } else {
-                const { data: pr } = await github.rest.pulls.create({
-                  owner: context.repo.owner,
-                  repo:  context.repo.repo,
-                  title, head: branch, base: 'main', body
-                });
-                core.info(`Sukurtas PR: #${pr.number}`);
-              }
-            } catch (e) {
-              core.warning(`Nepavyko sukurti PR: ${e.message}`);
+              core.info(`Sukurtas PR: #${pr.data.number}`);
+            } else {
+              core.info(`PR jau egzistuoja: #${openPRs[0].number}`);
             }
