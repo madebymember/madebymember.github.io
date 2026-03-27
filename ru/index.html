@@ -1,0 +1,301 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Руки прочь — от свободы слова</title>
+<meta name="description" content="Власть пытается изменить управление LRT и ослабить общественного вещателя. Общество этому сопротивляется.">
+<link rel="canonical" href="https://šalinrankas.lt/ru/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://šalinrankas.lt/ru/">
+<meta property="og:title" content="Руки прочь — от свободы слова">
+<meta property="og:description" content="Власть пытается изменить управление LRT и ослабить общественного вещателя. Общество этому сопротивляется.">
+<meta property="og:image" content="https://šalinrankas.lt/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Руки прочь — от свободы слова">
+<meta name="twitter:description" content="Власть пытается изменить управление LRT и ослабить общественного вещателя. Общество этому сопротивляется.">
+<link rel="alternate" hreflang="lt" href="https://šalinrankas.lt/lt/"><link rel="alternate" hreflang="en" href="https://šalinrankas.lt/en/"><link rel="alternate" hreflang="pl" href="https://šalinrankas.lt/pl/"><link rel="alternate" hreflang="uk" href="https://šalinrankas.lt/uk/"><link rel="alternate" hreflang="ru" href="https://šalinrankas.lt/ru/"><link rel="alternate" hreflang="x-default" href="https://šalinrankas.lt/lt/">
+<link rel="stylesheet" href="/assets/styles.css">
+</head><body>
+  <div class="container">
+    <div class="topbar">
+      <a class="brand" href="/ru/">
+        <img src="/assets/logo.png" alt="Logo">
+        <strong>ŠALIN RANKAS</strong>
+      </a>
+      <nav class="lang" aria-label="Language">
+        <a href="/lt/">LT</a><a href="/en/">EN</a><a href="/pl/">PL</a><a href="/uk/">UK</a><a href="/ru/" aria-current="page">RU</a>
+      </nav>
+    </div>
+
+    <header class="hero">
+      <div class="hero-grid">
+        <img class="hero-logo" src="/assets/logo-fire.png" alt="Šalin rankas — laisvas žodis">
+        <div>
+          <h1 class="h1"><span data-i18n="tagline"></span><br><span data-i18n="tagline2"></span></h1>
+          <p class="lead" data-i18n="lead"></p>
+
+          <div class="event-pill" aria-label="Next event">
+            <div class="event-pill__left">
+              <span class="event-pill__label" id="event-label" data-i18n="nextEvent"></span>
+              <strong class="event-pill__title" id="event-title">…</strong>
+            </div>
+            <div class="event-pill__right">
+              <span class="event-pill__dt" id="event-datetime">…</span>
+              <div class="event-pill__links">
+                <a class="event-pill__link" id="event-ics" href="#">+ ICS</a>
+                <a class="event-pill__link" id="event-fb" href="#" target="_blank" rel="noopener noreferrer" hidden>Facebook</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn primary" href="#feed" data-i18n="btnEvents"></a>
+            <a class="btn secondary" href="#privacy" data-i18n="btnAbout"></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="feed">
+      <h2 data-i18n="sectionFeed"></h2>
+      <div class="card">
+        <div class="search">
+          <input type="search" data-search-input data-i18n-placeholder="searchPlaceholder" placeholder="Search…" aria-label="Search">
+          <a class="btn secondary" id="share-fb" target="_blank" rel="noopener noreferrer" data-i18n="share">Share</a>
+          <button class="btn secondary" id="share-copy" type="button" data-i18n="share">Share</button>
+        </div>
+      </div>
+      <div class="grid" style="margin-top:.75rem" data-search-list>
+        <!-- rendered by script -->
+      </div>
+    </section>
+
+    <section class="section" id="map-section">
+      <h2 data-i18n="sectionMap"></h2>
+      <div class="map-card">
+        <p class="map-card__desc" data-i18n="mapDesc"></p>
+        <button class="btn secondary" id="load-map-btn" type="button">🗺️</button>
+        <div id="map" class="map-card__map" hidden data-lat="54.690264" data-lng="25.262502" data-label="Vilniaus Nepriklausomybės aikštė"></div>
+        <div class="small" style="margin-top:.75rem">
+          <a id="open-osm" href="#" target="_blank" rel="noopener noreferrer" style="color:var(--accent2);font-weight:800"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <h2 data-i18n="privacy"></h2>
+      <div class="card">
+        <p class="small">Ši svetainė nerenka asmens duomenų. Nenaudojami analitiniai įrankiai. Žemėlapis kraunamas tik paspaudus, todėl trečiųjų šalių užklausos vykdomos tik jūsų veiksmu.</p>
+        <p class="small">→ <a href="/ru/privacy/" style="color:var(--accent2);font-weight:800">Privacy policy</a> · <a href="/ru/cookies/" style="color:var(--accent2);font-weight:800">Cookies</a></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div><span data-i18n="contact"></span>: <a href="mailto:mariusstauga@protonmail.ch">mariusstauga@protonmail.ch</a></div>
+      <div class="small" data-i18n="updated"></div>
+      <div class="small"><a href="/ru/privacy/" data-i18n="privacy"></a> · <a href="/ru/cookies/" data-i18n="cookies"></a></div>
+    </footer>
+  </div>
+
+  <script src="/assets/app.js" defer></script>
+  <script>
+const SITE = { domain: 'https://šalinrankas.lt' };
+const LANG = document.documentElement.lang;
+const TZ = 'Europe/Vilnius';
+
+async function loadJSON(path){
+  const res = await fetch(path, {cache:'no-cache'});
+  if(!res.ok) throw new Error('Fetch failed: '+path);
+  return res.json();
+}
+
+function fmtDateTime(dateStr, timeStr, locale){
+  // dateStr YYYY-MM-DD, timeStr HH:MM
+  const iso = `${dateStr}T${timeStr}:00`;
+  const d = new Date(iso);
+  const datePart = new Intl.DateTimeFormat(locale,{timeZone:TZ, day:'numeric', month:'long'}).format(d);
+  const timePart = new Intl.DateTimeFormat(locale,{timeZone:TZ, hour:'2-digit', minute:'2-digit', hour12:false}).format(d);
+  return `${datePart} | ${timePart}`;
+}
+
+function escapeICS(text){
+  return String(text||'').replace(/\/g,'\\').replace(/
+/g,'\n').replace(/,/g,'\,').replace(/;/g,'\;');
+}
+
+function icsBlobUrl({title,startISO,endISO,location,description}){
+  const toICSLocal = (iso)=>{
+    const d = new Date(iso);
+    const pad = n => String(n).padStart(2,'0');
+    return `${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+  };
+  const uid = `salinrankas-${Math.random().toString(16).slice(2)}@github-pages`;
+  const dtStamp = new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+  const lines = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Salin Rankas//LT//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',
+    'BEGIN:VEVENT',`UID:${uid}`,`DTSTAMP:${dtStamp}`,`SUMMARY:${escapeICS(title)}`,
+    `DESCRIPTION:${escapeICS(description||'')}`,`LOCATION:${escapeICS(location||'')}`,
+    `DTSTART;TZID=${TZ}:${toICSLocal(startISO)}`
+  ];
+  if(endISO) lines.push(`DTEND;TZID=${TZ}:${toICSLocal(endISO)}`);
+  lines.push('END:VEVENT','END:VCALENDAR');
+  const blob = new Blob([lines.join('
+')], {type:'text/calendar;charset=utf-8'});
+  return URL.createObjectURL(blob);
+}
+
+function makeShareUrls(url, title){
+  const u = encodeURIComponent(url);
+  const t = encodeURIComponent(title);
+  return {
+    fb: `https://www.facebook.com/sharer/sharer.php?u=${u}`
+  };
+}
+
+(async function init(){
+  const ui = await loadJSON('/data/ui.json');
+  const dict = ui[LANG] || ui.lt;
+
+  // Top texts
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(dict[key]) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-placeholder');
+    if(dict[key]) el.setAttribute('placeholder', dict[key]);
+  });
+
+  // Map button strings
+  const mapBtn = document.getElementById('load-map-btn');
+  if(mapBtn){
+    mapBtn.textContent = dict.mapBtn;
+    mapBtn.setAttribute('data-loading', dict.mapLoading);
+    mapBtn.setAttribute('data-toggle', dict.mapToggle);
+    mapBtn.setAttribute('data-error', dict.mapError);
+  }
+
+  const posts = await loadJSON('/data/posts.json');
+
+  // Next event (first upcoming by date/time)
+  const events = posts.filter(p=>p.type==='event').sort((a,b)=> (a.date+a.time).localeCompare(b.date+b.time));
+  const next = events[0];
+  if(next){
+    const locale = {'lt':'lt-LT','en':'en-GB','pl':'pl-PL','uk':'uk-UA','ru':'ru-RU'}[LANG] || 'lt-LT';
+    const dt = fmtDateTime(next.date, next.time, locale);
+    const title = (next.title[LANG]||next.title.lt);
+    const place = (next.locationName[LANG]||next.locationName.lt);
+    const dtEl = document.getElementById('event-datetime');
+    const titleEl = document.getElementById('event-title');
+    const labelEl = document.getElementById('event-label');
+    if(dtEl) dtEl.textContent = dt;
+    if(titleEl) titleEl.textContent = title;
+    if(labelEl) labelEl.textContent = dict.nextEvent;
+
+    const ics = document.getElementById('event-ics');
+    if(ics){
+      ics.textContent = dict.ics;
+      ics.href = icsBlobUrl({
+        title,
+        startISO: `${next.date}T${next.time}:00`,
+        endISO: `${next.date}T20:00:00`,
+        location: place,
+        description: dict.siteTitle
+      });
+      ics.setAttribute('download', `salin-rankas-${LANG}-event.ics`);
+    }
+
+    const fb = document.getElementById('event-fb');
+    if(fb && next.links && next.links.facebookEvent){
+      fb.textContent = dict.fbEvent;
+      fb.href = next.links.facebookEvent;
+      fb.hidden = false;
+    }
+
+    // map coords
+    const map = document.getElementById('map');
+    if(map && next.coords){
+      map.dataset.lat = next.coords.lat;
+      map.dataset.lng = next.coords.lng;
+      map.dataset.label = place;
+      const osm = document.getElementById('open-osm');
+      if(osm){
+        osm.textContent = dict.openOSM;
+        osm.href = `https://www.openstreetmap.org/?mlat=${next.coords.lat}&mlon=${next.coords.lng}#map=17/${next.coords.lat}/${next.coords.lng}`;
+      }
+    }
+
+    // Share
+    const share = makeShareUrls(location.href, dict.siteTitle);
+    const shareFb = document.getElementById('share-fb');
+    if(shareFb){ shareFb.href = share.fb; }
+    const shareCopy = document.getElementById('share-copy');
+    if(shareCopy){
+      shareCopy.addEventListener('click', async ()=>{
+        try{ await navigator.clipboard.writeText(location.href); shareCopy.textContent = '✓'; setTimeout(()=>shareCopy.textContent=dict.share, 900); }catch(e){}
+      });
+    }
+  }
+
+  // Feed list (events + news)
+  const feed = document.querySelector('[data-search-list]');
+  if(feed){
+    feed.innerHTML = '';
+    const locale = {'lt':'lt-LT','en':'en-GB','pl':'pl-PL','uk':'uk-UA','ru':'ru-RU'}[LANG] || 'lt-LT';
+    posts
+      .slice()
+      .sort((a,b)=> (b.date+(b.time||'')).localeCompare(a.date+(a.time||'')))
+      .forEach(p=>{
+        const isEvent = p.type==='event';
+        const title = (p.title[LANG]||p.title.lt);
+        const summary = (p.summary && (p.summary[LANG]||p.summary.lt)) || '';
+        const metaParts = [p.date];
+        if(isEvent && p.time) metaParts.push(p.time);
+        if(isEvent && p.locationName) metaParts.push((p.locationName[LANG]||p.locationName.lt));
+        const meta = metaParts.join(' · ');
+        const hay = [title, summary, meta].join(' ');
+
+        const el = document.createElement('div');
+        el.className = 'card item';
+        el.setAttribute('data-search-item','');
+        el.setAttribute('data-search-hay', hay);
+
+        const badge = document.createElement('span');
+        badge.className = 'badge';
+        badge.textContent = isEvent ? 'EVENT' : 'NEWS';
+
+        const h = document.createElement('div');
+        h.style.fontWeight = '900';
+        h.textContent = title;
+
+        const m = document.createElement('div');
+        m.className = 'meta';
+        m.textContent = meta;
+
+        const s = document.createElement('div');
+        s.className = 'small';
+        s.textContent = summary;
+
+        el.appendChild(badge);
+        el.appendChild(h);
+        el.appendChild(m);
+        if(summary) el.appendChild(s);
+
+        // optional link
+        if(isEvent && p.links && p.links.facebookEvent){
+          const a = document.createElement('a');
+          a.href = p.links.facebookEvent;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.className = 'small';
+          a.style.color = 'var(--accent2)';
+          a.style.fontWeight = '800';
+          a.textContent = dict.fbEvent;
+          el.appendChild(a);
+        }
+
+        feed.appendChild(el);
+      });
+  }
+})();
+</script>
+</body></html>

@@ -1,0 +1,12 @@
+{
+  "domain": "https://šalinrankas.lt",
+  "contactEmail": "mariusstauga@protonmail.ch",
+  "defaultLang": "lt",
+  "languages": [
+    "lt",
+    "en",
+    "pl",
+    "uk",
+    "ru"
+  ]
+}

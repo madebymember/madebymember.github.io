@@ -1,0 +1,38 @@
+[
+  {
+    "id": "2026-04-08-vilnius-nepriklausomybes-aikste",
+    "type": "event",
+    "date": "2026-04-08",
+    "time": "18:00",
+    "timezone": "Europe/Vilnius",
+    "title": {
+      "lt": "Protestas Nepriklausomybės aikštėje",
+      "en": "Protest at Independence Square",
+      "pl": "Protest na Placu Niepodległości",
+      "uk": "Протест на Площі Незалежності",
+      "ru": "Протест на площади Независимости"
+    },
+    "summary": {
+      "lt": "Susitikimas už laisvą žodį ir nepriklausomą visuomeninį transliuotoją.",
+      "en": "Gathering in support of free speech and an independent public broadcaster.",
+      "pl": "Spotkanie w obronie wolnego słowa i niezależnego nadawcy publicznego.",
+      "uk": "Зустріч на підтримку свободи слова та незалежного суспільного мовника.",
+      "ru": "Встреча в поддержку свободы слова и независимого общественного вещателя."
+    },
+    "locationName": {
+      "lt": "Vilniaus Nepriklausomybės aikštė",
+      "en": "Vilnius – Independence Square",
+      "pl": "Wilno – Plac Niepodległości",
+      "uk": "Вільнюс — Площа Незалежності",
+      "ru": "Вильнюс — площадь Независимости"
+    },
+    "coords": {
+      "lat": 54.690264,
+      "lng": 25.262502
+    },
+    "links": {
+      "facebookEvent": "https://fb.me/e/5OEcLcgq95"
+    },
+    "images": []
+  }
+]

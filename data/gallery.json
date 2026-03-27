@@ -1,0 +1,25 @@
+[
+  {
+    "id": "2026-04-08-vilnius-nepriklausomybes-aikste",
+    "date": "2026-04-08",
+    "title": {
+      "lt": "Vilnius – Nepriklausomybės aikštė",
+      "en": "Vilnius – Independence Square",
+      "pl": "Wilno – Plac Niepodległości",
+      "uk": "Вільнюс — Площа Незалежності",
+      "ru": "Вильнюс — площадь Независимости"
+    },
+    "links": [
+      {
+        "label": {
+          "lt": "Nuotraukų albumas",
+          "en": "Photo album",
+          "pl": "Album zdjęć",
+          "uk": "Фотоальбом",
+          "ru": "Фотоальбом"
+        },
+        "url": "PAKEISKITE_SIA_NUORODA_I_ALBUMA"
+      }
+    ]
+  }
+]
