@@ -12,4 +12,4 @@ Edit:
 - `data/posts.json` (events + news)
 - `data/gallery.json` (archive album links)
 
-No personal data is collected. Map loads only after a user click.
+Map loads only after a user click.
