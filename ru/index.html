@@ -117,9 +117,12 @@ function fmtDateTime(dateStr, timeStr, locale){
   return `${datePart} | ${timePart}`;
 }
 
-function escapeICS(text){
-  return String(text||'').replace(/\/g,'\\').replace(/
-/g,'\n').replace(/,/g,'\,').replace(/;/g,'\;');
+function escapeICS(text) {
+  return String(text || '')
+    .replaceAll('\\', '\\\\')
+    .replaceAll('\n', '\\n')
+    .replaceAll(',', '\\,')
+    .replaceAll(';', '\\;');
 }
 
 function icsBlobUrl({title,startISO,endISO,location,description}){
