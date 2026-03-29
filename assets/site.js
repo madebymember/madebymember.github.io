@@ -18,7 +18,7 @@
     return `${datePart} | ${timePart}`;
   }
 
-  function escapeICS(text){
+  function escapeICS(text) {
     return String(text||'')
       .replaceAll('\\', '\\\\')
       .replaceAll('\n', '\\n')
