@@ -3,20 +3,20 @@
     "id": "2026-04-08-vilnius-nepriklausomybes-aikste",
     "date": "2026-04-08",
     "title": {
-      "lt": "Vilnius – Nepriklausomybės aikštė",
-      "en": "Vilnius – Independence Square",
-      "pl": "Wilno – Plac Niepodległości",
-      "uk": "Вільнюс — Площа Незалежності",
-      "ru": "Вильнюс — площадь Независимости"
+      "lt": "Protestas – Vilnius (Nepriklausomybės aikštė)",
+      "en": "Protest – Vilnius (Independence Square)",
+      "pl": "Protest – Wilno (Plac Niepodległości)",
+      "uk": "Протест — Вільнюс (Площа Незалежності)",
+      "ru": "Протест — Вильнюс (площадь Независимости)"
     },
     "links": [
       {
         "label": {
-          "lt": "Nuotraukų albumas",
-          "en": "Photo album",
-          "pl": "Album zdjęć",
-          "uk": "Фотоальбом",
-          "ru": "Фотоальбом"
+          "lt": "Fotogalerija (LRT)",
+          "en": "Photo gallery (LRT)",
+          "pl": "Galeria zdjęć (LRT)",
+          "uk": "Фотогалерея (LRT)",
+          "ru": "Фотогалерея (LRT)"
         },
         "url": "https://www.lrt.lt/naujienos/fotogalerijos/685/2770269/protestas-salin-rankas"
       }

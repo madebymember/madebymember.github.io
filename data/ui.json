@@ -17,14 +17,16 @@
     "mapError": "⚠️ Nepavyko įkelti žemėlapio",
     "openOSM": "Atidaryti OpenStreetMap",
     "archive": "Archyvas",
-    "gallery": "Fotogalerijos",
+    "archiveHint": "Praėję renginiai ir nuorodos į fotogalerijas.",
+    "noArchive": "Kol kas archyvo įrašų nėra.",
     "privacy": "Privatumas",
     "cookies": "Slapukai",
     "contact": "Kontaktai",
     "share": "Dalintis",
     "ics": "+ Į kalendorių",
     "fbEvent": "Facebook renginys",
-    "updated": "Turinys atnaujinamas repozitorijoje."
+    "updated": "Turinys atnaujinamas repozitorijoje.",
+    "home": "Pradžia"
   },
   "en": {
     "siteTitle": "Hands off — free speech",
@@ -44,14 +46,16 @@
     "mapError": "⚠️ Map failed to load",
     "openOSM": "Open OpenStreetMap",
     "archive": "Archive",
-    "gallery": "Photo galleries",
+    "archiveHint": "Past events and links to photo galleries.",
+    "noArchive": "No archive entries yet.",
     "privacy": "Privacy",
     "cookies": "Cookies",
     "contact": "Contact",
     "share": "Share",
     "ics": "+ Add to calendar",
     "fbEvent": "Facebook event",
-    "updated": "Content is updated in the repository."
+    "updated": "Content is updated in the repository.",
+    "home": "Home"
   },
   "pl": {
     "siteTitle": "Precz łapy — od wolnego słowa",
@@ -71,14 +75,16 @@
     "mapError": "⚠️ Nie udało się wczytać mapy",
     "openOSM": "Otwórz OpenStreetMap",
     "archive": "Archiwum",
-    "gallery": "Galerie zdjęć",
+    "archiveHint": "Minione wydarzenia i linki do fotogalerii.",
+    "noArchive": "Brak wpisów w archiwum.",
     "privacy": "Prywatność",
     "cookies": "Cookies",
     "contact": "Kontakt",
     "share": "Udostępnij",
     "ics": "+ Do kalendarza",
     "fbEvent": "Wydarzenie na Facebooku",
-    "updated": "Treść aktualizowana w repozytorium."
+    "updated": "Treść aktualizowana w repozytorium.",
+    "home": "Start"
   },
   "uk": {
     "siteTitle": "Геть руки — від свободи слова",
@@ -98,14 +104,16 @@
     "mapError": "⚠️ Не вдалося завантажити мапу",
     "openOSM": "Відкрити OpenStreetMap",
     "archive": "Архів",
-    "gallery": "Фотогалереї",
+    "archiveHint": "Минулі події та посилання на фотогалереї.",
+    "noArchive": "Поки що архів порожній.",
     "privacy": "Приватність",
     "cookies": "Cookies",
     "contact": "Контакти",
     "share": "Поділитися",
     "ics": "+ Додати до календаря",
     "fbEvent": "Подія у Facebook",
-    "updated": "Контент оновлюється в репозиторії."
+    "updated": "Контент оновлюється в репозиторії.",
+    "home": "Головна"
   },
   "ru": {
     "siteTitle": "Руки прочь — от свободы слова",
@@ -125,13 +133,15 @@
     "mapError": "⚠️ Не удалось загрузить карту",
     "openOSM": "Открыть OpenStreetMap",
     "archive": "Архив",
-    "gallery": "Фотоальбомы",
+    "archiveHint": "Прошедшие события и ссылки на фотогалереи.",
+    "noArchive": "Пока архив пуст.",
     "privacy": "Приватность",
     "cookies": "Cookies",
     "contact": "Контакты",
     "share": "Поделиться",
     "ics": "+ В календарь",
     "fbEvent": "Событие Facebook",
-    "updated": "Контент обновляется в репозитории."
+    "updated": "Контент обновляется в репозитории.",
+    "home": "Главная"
   }
 }

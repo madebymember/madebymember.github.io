@@ -1,6 +1,5 @@
-// Minimal client-side features: search filter + map load-on-click + ICS
+// Search filter + map load-on-click
 (function(){
-  // Search filter across items
   const input = document.querySelector('[data-search-input]');
   const list = document.querySelector('[data-search-list]');
   if(input && list){
@@ -14,7 +13,6 @@
     });
   }
 
-  // Map load-on-click (Leaflet) - only loads after user action for privacy
   const btn = document.getElementById('load-map-btn');
   const mapEl = document.getElementById('map');
   if(btn && mapEl){
@@ -22,9 +20,7 @@
     btn.addEventListener('click', async ()=>{
       if(loaded){
         mapEl.hidden = !mapEl.hidden;
-        if(!mapEl.hidden && mapEl._leaflet_map){
-          mapEl._leaflet_map.invalidateSize();
-        }
+        if(!mapEl.hidden && mapEl._leaflet_map){ mapEl._leaflet_map.invalidateSize(); }
         return;
       }
       loaded = true;
@@ -37,10 +33,7 @@
         const label = mapEl.dataset.label || '';
         mapEl.hidden = false;
         const map = L.map(mapEl,{zoomControl:true,scrollWheelZoom:false}).setView([lat,lng],16);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-          maxZoom:19,
-          attribution:'&copy; OpenStreetMap'
-        }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap'}).addTo(map);
         const m = L.marker([lat,lng]).addTo(map);
         if(label) m.bindPopup(label);
         mapEl._leaflet_map = map;

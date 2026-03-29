@@ -10,6 +10,9 @@ Static website for news, events, and archive.
 ## Update content
 Edit:
 - `data/posts.json` (events + news)
-- `data/gallery.json` (archive album links)
+- `data/gallery.json` (archive links)
 
-Map loads only after a user click.
+## Contact
+- salinrankas.lt.zrpk4@passmail.net
+
+No personal data is collected. Map loads only after a user click.
