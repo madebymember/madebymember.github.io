@@ -47,8 +47,7 @@
     if(endISO) lines.push(`DTEND;TZID=${TZ}:${toICSLocal(endISO)}`);
     lines.push('END:VEVENT','END:VCALENDAR');
 
-    const blob = new Blob([lines.join('
-')], {type:'text/calendar;charset=utf-8'});
+    const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
     return URL.createObjectURL(blob);
   }
 
