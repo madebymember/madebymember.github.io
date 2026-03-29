@@ -18,13 +18,11 @@
     return `${datePart} | ${timePart}`;
   }
 
-  function escapeICS(text){
-    return String(text||'')
-      .replaceAll('\', '\\')
-      .replaceAll('
-', '\n')
-      .replaceAll(',', '\,')
-      .replaceAll(';', '\;');
+  function escapeICS(text) {
+  return String(text || '')
+    .replaceAll('\\', '\\\\')  // \  -> \\
+    .replaceAll('\n', '\\n')   // newline -> \n
+    .replaceAll(',',
   }
 
   function icsBlobUrl({title,startISO,endISO,location,description}){
